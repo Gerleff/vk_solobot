@@ -1,0 +1,356 @@
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/site-packages/urllib3/connectionpool.py", line 377, in _make_request
+    httplib_response = conn.getresponse(buffering=True)
+TypeError: getresponse() got an unexpected keyword argument 'buffering'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/site-packages/urllib3/contrib/pyopenssl.py", line 285, in recv_into
+    return self.connection.recv_into(*args, **kwargs)
+  File "/usr/lib/python3.7/site-packages/OpenSSL/SSL.py", line 1814, in recv_into
+    self._raise_ssl_error(self._ssl, result)
+  File "/usr/lib/python3.7/site-packages/OpenSSL/SSL.py", line 1614, in _raise_ssl_error
+    raise WantReadError()
+OpenSSL.SSL.WantReadError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ptiichkaaa/botSoloway.py", line 119, in <module>
+    try:
+  File "/home/ptiichkaaa/botSoloway.py", line 80, in main
+    for event in longpoll.listen():
+  File "./vk_api/bot_longpoll.py", line 276, in listen
+    for event in self.check():
+  File "./vk_api/bot_longpoll.py", line 248, in check
+    timeout=self.wait + 10
+  File "/usr/lib/python3.7/site-packages/requests/sessions.py", line 525, in get
+    return self.request('GET', url, **kwargs)
+  File "/usr/lib/python3.7/site-packages/requests/sessions.py", line 512, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.7/site-packages/requests/sessions.py", line 622, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.7/site-packages/requests/adapters.py", line 445, in send
+    timeout=timeout
+  File "/usr/lib/python3.7/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/lib/python3.7/site-packages/urllib3/connectionpool.py", line 380, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.7/http/client.py", line 1321, in getresponse
+    response.begin()
+  File "/usr/lib/python3.7/http/client.py", line 296, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.7/http/client.py", line 257, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.7/site-packages/urllib3/contrib/pyopenssl.py", line 297, in recv_into
+    if not util.wait_for_read(self.socket, self.socket.gettimeout()):
+  File "/usr/lib/python3.7/site-packages/urllib3/util/wait.py", line 146, in wait_for_read
+    return wait_for_socket(sock, read=True, timeout=timeout)
+  File "/usr/lib/python3.7/site-packages/urllib3/util/wait.py", line 107, in poll_wait_for_socket
+
+
+22:46:32.846953--->ReadTimeOutError
+22:45:21.493832--->ReadTimeOutError  File "/usr/lib/python3.7/site-packages/urllib3/util/wait.py", line 105, in do_poll
+    return poll_obj.poll(t)
+KeyboardInterrupt
+
+
+22:51:11.598980--->ReadTimeOutError
+22:50:11.590654--->ReadTimeOutError
+22:39:44.047146--->ReadTimeOutError
+22:39:29.302411--->ReadTimeOutError  File "/usr/lib/python3.7/site-packages/requests/adapters.py", line 507, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='api.vk.com', port=443): Max retries exceeded with url: /method/messages.send (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response')))
+
+
+22:49:28.093699--->ReadTimeOutError
+22:46:40.977060--->ReadTimeOutError
+22:47:21.387326--->ReadTimeOutError  File "./vk_parser.py", line 59, in photos_get
+    return response.json()['response']['items'][0]['id']
+KeyError: 'response'
+
+  File "./vk_parser.py", line 59, in photos_get
+    return response.json()['response']['items'][0]['id']
+KeyError: 'response'
+
+
+22:43:41.560583--->ReadTimeOutError
+07:47:56.066291--->ReadTimeOutError
+22:38:10.282777--->ReadTimeOutError
+22:46:23.054247--->ReadTimeOutError
+22:44:53.549318--->ReadTimeOutError
+22:48:00.938015--->ReadTimeOutError
+22:36:57.558271--->ReadTimeOutError
+02:42:51.814463--->ReadTimeOutError
+22:48:03.899487--->ReadTimeOutError
+22:47:15.369824--->ReadTimeOutError
+06:05:21.065772--->ReadTimeOutError
+22:46:09.990198--->ReadTimeOutError
+00:33:20.427121--->ReadTimeOutError
+22:37:55.100207--->ReadTimeOutError
+22:38:43.306897--->ReadTimeOutError
+00:09:31.041051--->ReadTimeOutError
+22:38:42.447988--->ReadTimeOutError
+22:39:18.723574--->ReadTimeOutError
+22:50:53.944103--->ReadTimeOutError
+22:48:00.587299--->ReadTimeOutError
+08:40:35.900751--->ReadTimeOutError
+22:37:14.754895--->ReadTimeOutError
+22:37:24.020377--->ReadTimeOutError
+22:49:22.133443--->ReadTimeOutError
+22:37:36.357326--->ReadTimeOutError
+22:48:53.623607--->ReadTimeOutError
+22:38:25.605983--->ReadTimeOutError
+22:49:35.988772--->ReadTimeOutError
+22:40:35.326844--->ReadTimeOutError
+22:47:57.496180--->ReadTimeOutError
+22:43:04.173884--->ReadTimeOutError
+22:45:54.449166--->ReadTimeOutError
+22:44:57.842010--->ReadTimeOutError
+22:46:14.886479--->ReadTimeOutError
+22:50:59.922540--->ReadTimeOutError
+22:41:19.820199--->ReadTimeOutError
+22:52:39.682991--->ReadTimeOutError
+22:54:11.796213--->ReadTimeOutError
+22:48:21.437587--->ReadTimeOutError
+22:47:09.184327--->ReadTimeOutError
+22:40:24.202553--->ReadTimeOutError
+22:38:40.863893--->ReadTimeOutError
+22:50:10.245647--->ReadTimeOutError
+22:39:26.431441--->ReadTimeOutError
+22:42:25.479821--->ReadTimeOutError
+20:52:17.176232--->ReadTimeOutError
+22:39:14.026961--->ReadTimeOutError
+22:43:49.969778--->ReadTimeOutError
+22:41:40.195710--->ReadTimeOutError
+22:48:36.818684--->ReadTimeOutError
+22:52:17.801096--->ReadTimeOutError
+22:39:29.070584--->ReadTimeOutError
+22:43:37.345452--->ReadTimeOutError
+22:47:09.362087--->ReadTimeOutError
+22:38:45.269428--->ReadTimeOutError
+22:51:33.487376--->ReadTimeOutError
+22:36:55.964470--->ReadTimeOutError
+22:43:28.819902--->ReadTimeOutError
+05:04:50.939800--->ReadTimeOutError  File "/usr/lib/python3.7/site-packages/requests/adapters.py", line 507, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='api.vk.com', port=443): Max retries exceeded with url: /method/messages.send (Caused by ProxyError('Cannot connect to proxy.', RemoteDisconnected('Remote end closed connection without response')))
+
+
+22:45:25.282518--->ReadTimeOutError
+21:22:18.354870--->ReadTimeOutError
+22:44:53.325426--->ReadTimeOutError
+22:42:31.226717--->ReadTimeOutError
+00:20:26.713879--->ReadTimeOutError
+22:47:30.976321--->ReadTimeOutError
+22:43:55.439814--->ReadTimeOutError
+22:51:49.623466--->ReadTimeOutError
+22:43:40.928445--->ReadTimeOutError
+22:52:00.197708--->ReadTimeOutError
+21:35:33.467747--->ReadTimeOutError
+21:36:09.504820--->ReadTimeOutError
+22:42:17.879138--->ReadTimeOutError
+22:53:49.144170--->ReadTimeOutError
+22:50:35.923733--->ReadTimeOutError
+22:48:48.679549--->ReadTimeOutError
+22:53:13.331477--->ReadTimeOutError
+22:39:14.306831--->ReadTimeOutError
+22:53:33.956730--->ReadTimeOutError
+22:36:59.633603--->ReadTimeOutError
+22:43:50.343587--->ReadTimeOutError
+22:53:16.569176--->ReadTimeOutError
+22:49:54.501005--->ReadTimeOutError
+22:39:29.818170--->ReadTimeOutError
+22:44:54.526718--->ReadTimeOutError
+22:41:49.204120--->ReadTimeOutError
+22:45:37.067156--->ReadTimeOutError
+22:48:56.125817--->ReadTimeOutError
+22:51:58.279411--->ReadTimeOutError
+22:39:30.224368--->ReadTimeOutError
+22:51:11.196122--->ReadTimeOutError
+22:39:32.408678--->ReadTimeOutError
+22:42:38.505273--->ReadTimeOutError
+22:48:05.036454--->ReadTimeOutError
+22:42:10.069701--->ReadTimeOutError
+22:37:08.526985--->ReadTimeOutError
+22:41:13.390053--->ReadTimeOutError
+22:40:14.732135--->ReadTimeOutError
+22:40:45.412669--->ReadTimeOutError
+22:47:39.596507--->ReadTimeOutError
+22:42:38.617160--->ReadTimeOutError
+22:04:52.664565--->ReadTimeOutError
+22:45:06.634026--->ReadTimeOutError
+22:42:25.308498--->ReadTimeOutError
+22:42:12.117794--->ReadTimeOutError
+22:40:11.989145--->ReadTimeOutError
+22:47:22.653416--->ReadTimeOutError
+22:51:48.694642--->ReadTimeOutError
+22:39:47.063395--->ReadTimeOutError
+22:51:57.930366--->ReadTimeOutError
+22:44:33.040935--->ReadTimeOutError
+22:53:48.526774--->ReadTimeOutError
+22:40:38.428989--->ReadTimeOutError
+22:46:35.416964--->ReadTimeOutError
+00:00:02.486510--->ReadTimeOutError
+10:26:10.344601--->ReadTimeOutError
+22:52:50.779198--->ReadTimeOutError
+23:03:12.927204--->ReadTimeOutError
+22:45:48.883891--->ReadTimeOutError
+22:47:28.023691--->ReadTimeOutError
+22:48:16.546949--->ReadTimeOutError
+22:43:35.352731--->ReadTimeOutError
+22:44:37.429441--->ReadTimeOutError
+19:29:11.737967--->ReadTimeOutError
+22:45:37.360421--->ReadTimeOutError
+22:45:51.400828--->ReadTimeOutError
+22:54:00.877259--->ReadTimeOutError
+22:40:38.138825--->ReadTimeOutError
+22:49:51.565979--->ReadTimeOutError
+22:48:16.097569--->ReadTimeOutError
+22:48:06.728231--->ReadTimeOutError
+08:06:15.377844--->ReadTimeOutError
+22:39:19.814338--->ReadTimeOutError
+22:43:59.302043--->ReadTimeOutError
+22:52:17.506288--->ReadTimeOutError
+22:43:05.116806--->ReadTimeOutError
+22:43:57.655297--->ReadTimeOutError
+22:45:48.993659--->ReadTimeOutError
+22:41:33.025200--->ReadTimeOutError
+22:39:43.861168--->ReadTimeOutError
+22:54:32.340379--->ReadTimeOutError
+22:50:31.666301--->ReadTimeOutError
+22:54:10.150806--->ReadTimeOutError
+22:41:31.027388--->ReadTimeOutError
+22:45:01.024605--->ReadTimeOutError
+09:39:45.287494--->ReadTimeOutError
+22:55:28.232151--->ReadTimeOutError
+23:56:37.082490--->ReadTimeOutError
+22:42:44.299713--->ReadTimeOutError
+22:55:47.121166--->ReadTimeOutError
+22:57:27.067489--->ReadTimeOutError
+22:47:10.308465--->ReadTimeOutError
+22:44:38.305550--->ReadTimeOutError
+22:48:43.801596--->ReadTimeOutError
+22:49:41.690373--->ReadTimeOutError
+22:50:02.227914--->ReadTimeOutError
+22:52:47.567303--->ReadTimeOutError
+22:51:32.982229--->ReadTimeOutError
+20:42:58.129040--->ReadTimeOutError
+22:41:42.255149--->ReadTimeOutError
+22:43:25.867782--->ReadTimeOutError
+22:45:56.305474--->ReadTimeOutError
+22:41:15.571762--->ReadTimeOutError
+23:01:27.825436--->ReadTimeOutError
+07:44:34.414272--->ReadTimeOutError
+22:59:00.904781--->ReadTimeOutError
+22:54:58.854566--->ReadTimeOutError
+22:59:40.890185--->ReadTimeOutError
+22:49:57.880265--->ReadTimeOutError
+05:09:05.495923--->ReadTimeOutError
+22:47:48.620643--->ReadTimeOutError
+22:45:13.840049--->ReadTimeOutError
+22:49:05.832552--->ReadTimeOutError
+22:46:05.807043--->ReadTimeOutError
+22:45:12.982809--->ReadTimeOutError
+22:47:36.731602--->ReadTimeOutError
+06:24:15.071094--->ReadTimeOutError
+22:46:37.957905--->ReadTimeOutError
+22:54:06.056782--->ReadTimeOutError
+22:53:49.060836--->ReadTimeOutError
+22:42:44.294826--->ReadTimeOutError
+22:48:03.925940--->ReadTimeOutError
+22:52:33.316009--->ReadTimeOutError
+22:41:15.428838--->ReadTimeOutError
+14:52:51.140674--->ReadTimeOutError
+15:58:20.309239--->ReadTimeOutError
+16:00:11.033858--->ReadTimeOutError
+16:05:56.869718--->ReadTimeOutError
+22:07:00.866009--->ReadTimeOutError
+22:47:58.872883--->ReadTimeOutError
+22:42:27.295598--->ReadTimeOutError
+22:51:26.508836--->ReadTimeOutError
+22:50:49.951566--->ReadTimeOutError
+22:46:13.731778--->ReadTimeOutError
+22:44:40.900657--->ReadTimeOutError
+22:38:22.980027--->ReadTimeOutError
+22:41:58.692314--->ReadTimeOutError
+22:39:53.330393--->ReadTimeOutError
+22:53:50.993914--->ReadTimeOutError
+22:40:23.865623--->ReadTimeOutError
+22:40:49.822196--->ReadTimeOutError
+22:39:30.390896--->ReadTimeOutError
+22:48:24.313046--->ReadTimeOutError
+22:52:08.716782--->ReadTimeOutError
+11:12:24.956415--->ReadTimeOutError
+22:47:01.958794--->ReadTimeOutError
+22:49:45.713990--->ReadTimeOutError
+22:43:15.237614--->ReadTimeOutError
+22:38:57.576419--->ReadTimeOutError
+22:38:38.352993--->ReadTimeOutError
+22:39:12.281676--->ReadTimeOutError
+21:20:26.457491--->ReadTimeOutError
+22:42:13.388004--->ReadTimeOutError
+22:48:20.995762--->ReadTimeOutError
+22:39:33.474042--->ReadTimeOutError
+22:41:37.927530--->ReadTimeOutError
+22:39:16.281464--->ReadTimeOutError
+22:53:09.419574--->ReadTimeOutError
+14:49:26.258984--->ReadTimeOutError
+22:49:40.198332--->ReadTimeOutError
+22:42:15.546354--->ReadTimeOutError
+22:37:50.483457--->ReadTimeOutError
+22:37:30.057293--->ReadTimeOutError
+10:56:58.550356--->ReadTimeOutError
+22:44:28.603427--->ReadTimeOutError
+22:50:15.635219--->ReadTimeOutError
+22:46:35.800639--->ReadTimeOutError
+22:38:28.264074--->ReadTimeOutError
+10:27:20.894930--->ReadTimeOutError
+22:43:05.641632--->ReadTimeOutError
+22:42:14.543255--->ReadTimeOutError
+22:37:35.904932--->ReadTimeOutError
+22:51:56.919966--->ReadTimeOutError
+03:23:19.214362--->ReadTimeOutError
+22:37:21.811058--->ReadTimeOutError
+02:22:09.998500--->ReadTimeOutError
+22:39:29.967089--->ReadTimeOutError
+22:52:13.599026--->ReadTimeOutError
+22:47:29.169980--->ReadTimeOutError
+20:38:15.375846--->ReadTimeOutError
+22:42:13.869154--->ReadTimeOutError
+06:19:50.364829--->ReadTimeOutError
+22:39:15.320919--->ReadTimeOutError
+22:40:15.721466--->ReadTimeOutError
+22:49:01.545709--->ReadTimeOutError
+22:39:03.572272--->ReadTimeOutError
+22:53:29.685997--->ReadTimeOutError
+22:39:15.430945--->ReadTimeOutError
+22:38:18.141663--->ReadTimeOutError
+22:41:17.826843--->ReadTimeOutError
+22:38:46.055474--->ReadTimeOutError
+22:40:20.661608--->ReadTimeOutError
+22:41:10.907205--->ReadTimeOutError
+22:37:08.137133--->ReadTimeOutError
+22:51:00.608262--->ReadTimeOutError
+12:13:58.821814--->ReadTimeOutError
+22:52:42.642916--->ReadTimeOutError
+22:38:26.210598--->ReadTimeOutError
+22:47:50.802768--->ReadTimeOutError
+22:50:47.009712--->ReadTimeOutError
+22:47:37.592335--->ReadTimeOutError
+22:52:39.485117--->ReadTimeOutError
+22:43:39.541651--->ReadTimeOutError
+22:49:38.026747--->ReadTimeOutError
+22:42:26.841718--->ReadTimeOutError
+23:34:46.012995--->ReadTimeOutError
+22:46:17.255386--->ReadTimeOutError
+22:41:39.114025--->ReadTimeOutError
+22:51:24.237548--->ReadTimeOutError
+22:48:06.176260--->ReadTimeOutError
+09:43:37.587985--->ReadTimeOutError
+22:54:31.924944--->ReadTimeOutError
+22:52:45.067651--->ReadTimeOutError
