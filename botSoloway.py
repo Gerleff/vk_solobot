@@ -23,8 +23,8 @@ def keyboard_in(vk, event):
     keyboard = VkKeyboard(one_time=False)
     keyboard.add_button(label='Получить картинку', color=VkKeyboardColor.SECONDARY)
     keyboard.add_button(label='Получить пост', color=VkKeyboardColor.PRIMARY)
-    keyboard.add_line()
-    keyboard.add_button(label='Покормить админа', color=VkKeyboardColor.POSITIVE)
+    # keyboard.add_line()
+    # keyboard.add_button(label='Покормить админа', color=VkKeyboardColor.POSITIVE)
     keyboard.add_line()  # Переход на вторую строку
     keyboard.add_vkapps_button(app_id=app_id,  # Приложение(для рассылки)
                                owner_id=owner_id,
